@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-07 13:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Mouse button
+#. GtkWidget* mouse_item = gtk_image_menu_item_new_with_label(_("Mouse"));
+#. g_signal_connect(mouse_item, "activate", G_CALLBACK(settings_clicked), "1");
+#. gtk_menu_append(GTK_MENU(menu), mouse_item);
+#. gtk_widget_show(mouse_item);
+#. gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mouse_item), get_resized_icon(MOUSE_ICON));
+#. Audio button
+#: lxpanel-plugin/microninja_settings.c:167
+msgid "Audio"
+msgstr ""
+
+#: lxpanel-plugin-internet/microninja_internet.c:266
+msgid "Connect"
+msgstr ""
+
+#. Internet working correctly, change the picture accordingly
+#: lxpanel-plugin-internet/microninja_internet.c:274
+msgid "Connected"
+msgstr ""
+
+#. Add the option to disconnect from the internet.
+#: lxpanel-plugin-internet/microninja_internet.c:281
+msgid "Disconnect"
+msgstr ""
+
+#: lxpanel-plugin-internet/microninja_internet.c:114
+msgid "Internet connection status"
+msgstr ""
+
+#. Keyboard button
+#: lxpanel-plugin/microninja_settings.c:155
+msgid "Keyboard"
+msgstr ""
+
+#: lxpanel-plugin/microninja_settings.c:90
+msgid "Microninja Settings"
+msgstr ""
+
+#. Change the widget's picture, menu title and add the option to try and connect to internet
+#: lxpanel-plugin-internet/microninja_internet.c:261
+msgid "Not connected"
+msgstr ""
+
+#. Display button
+#: lxpanel-plugin/microninja_settings.c:173
+msgid "Screen"
+msgstr ""
+
+#. Create the menu items
+#. All button
+#: lxpanel-plugin/microninja_settings.c:149
+#: lxpanel-plugin/microninja_settings.c:185
+msgid "Settings"
+msgstr ""
+
+#. WiFi button
+#: lxpanel-plugin/microninja_settings.c:179
+msgid "WiFi"
+msgstr ""

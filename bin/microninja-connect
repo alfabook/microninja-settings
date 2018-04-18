@@ -1,0 +1,187 @@
+#!/usr/bin/env python
+
+# kano-connect
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License:   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# desc: This script attempts to find an open wireless network and connect to it.
+#       Additionally it is capable of reconnecting to secure networks associated to by kwifiprompt.
+#
+# usage:
+#
+#   Case 1: Attempt connection to the strongest wireless non-secure network
+#   $ sudo kanoconnect.py wlan0
+#
+#   Case 2: Attempt connection to a specified open network
+#   $ sudo kanoconnect.py wlan0 essidname
+#
+#   Case 3: If the last cached network is found during scan, try to connect to it (secure / unsecure / hidden)
+#   $ sudo kanoconnect.py -c wlan0
+#
+# It might take some time for this script to finalise, depending on the wireless networks
+# in range, their signal strenght and response times to acquire a DHCP lease.
+#
+# Portions of this code are extracted from the project pywilist:
+#
+#   https://code.google.com/p/pywilist/
+#
+# The script needs root permissions. It is good to trigger it from
+# /etc/network/interfaces post-up event.
+#
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+# removed is_running check - does not work
+
+
+import os
+import sys
+from microninja.logging import logger
+#from microninja.utils import is_running
+from microninja.network import is_internet
+import atexit
+import signal
+
+from microninja.network import IWList, is_device, is_gateway, connect, disconnect, is_ethernet_plugged, KwifiCache
+
+# filename to keep our process semaphore
+pidfile = '/var/run/microninja-connect.pid'
+
+# If this file is present, kano-connect will try to connect
+# even if the Ethernet cable is plugged in.
+file_multihomed='/var/opt/microninja-connect/multihomed'
+
+def remove_pid(filename):
+    try:
+        os.unlink(filename)
+    except:
+        pass
+
+def sig_catch(signum, frame):
+    # SIGTERM handler
+    remove_pid()
+
+def attempt_connect(wiface, essid, encryption, enckey, conf=None):
+    online = False
+    if conf:
+        info = conf
+    else:
+        info = essid
+
+    logger.info("Attempting association to %s through interface %s" % (info, wiface))
+    try:
+        connect(wiface, essid, encryption, seckey=enckey, wpa_custom_file=conf)
+        online = is_gateway(wiface)
+    except:
+        pass
+
+    logger.info("Network association result: %s" % online)
+    return online
+
+if __name__ == '__main__':
+    wcache = KwifiCache()
+    essid = None
+    fsilent = False
+    cached_connect = False
+    fconnected = False
+
+    logger.info('microninja-connect is starting')
+    if not os.getuid() == 0:
+        logger.error('you need root privileges')
+        print 'You need root privileges to start this app. Please try sudo'
+        sys.exit(1)
+
+    # Check for ethernet cable
+    if is_ethernet_plugged() and not os.path.isfile(file_multihomed):
+        logger.info('ethernet cable is plugged in, exiting')
+        sys.exit(0)
+
+    # kano-connect should not step in if kano-wifi is working or if internet is up
+    #if is_running('microninja-wifi') or is_internet():
+    #    logger.info('Microninja-wifi is running or internet is already up - terminating')
+    if is_internet():
+        logger.info('Internet is already up - terminating')
+        sys.exit(0)
+    else:
+        if os.access(pidfile, os.R_OK):
+            # Attempt to start kano-connect when one is already in progress - exit quietly
+            sys.exit(0)
+        else:
+            # Install handlers for graceful and SIGTERM signals
+            atexit.register(remove_pid, pidfile)
+            with open(pidfile, 'w') as frun:
+                frun.write(str(os.getpid()))
+
+            signal.signal(signal.SIGTERM, sig_catch)
+
+
+    # TODO: Use getopt to collect parameters in a more clear way
+    if len(sys.argv) < 2:
+        print 'Syntax: microninjaconnect.py [-c] <iface> [essid]'
+        print '-c will try to connect to the latest cached network'
+        sys.exit(1)
+    else:
+        if sys.argv[1] == '-c':
+            if len(sys.argv) < 3:
+                logger.error('I need a wireless device name (wlanX)')
+                sys.exit(1)
+            else:
+                cached_connect = True
+                wiface = sys.argv[2]
+        else:
+            wiface = sys.argv[1]
+            if len(sys.argv) > 2:
+                essid = sys.argv[2]
+
+        # check if wireless dongle is plugged in
+        if not is_device(wiface):
+            logger.error('wireless device %s is not plugged in' % (wiface))
+            sys.exit(2)
+
+        # if cache connect mode, and there is no cached network, stop wasting time.
+        if cached_connect:
+            cached = wcache.get_latest()
+            if not cached:
+                logger.error('cache mode requested but no cached network found - exiting')
+                sys.exit(2)
+            else:
+                # If there is a cached network, try to connect straight away
+                wpaconf = None
+                if 'conf' in cached:
+                    wpaconf = cached['conf']
+
+                fconnected = attempt_connect(wiface, cached['essid'],
+                                             cached['encryption'], cached['enckey'], conf=wpaconf)
+                if fconnected:
+                    sys.exit(0)
+                else:
+                    sys.exit(1)
+
+        # attempt to connect to the specified open wireless network name
+        if not essid is None:
+            iwl = IWList(wiface).getList(unsecure=True)
+            for network in iwl:
+                if essid == network['essid']:
+                    fconnected = attempt_connect(wiface, essid, None, None)
+
+            if fconnected:
+                sys.exit(0)
+            else:
+                sys.exit(1)
+
+        # automatic open mode: find&attempt connect to strongest, open wireless network
+        for scan_attempts in range(1, 3):
+            disconnect(wiface)
+
+            # Will only try to connect to strongest signal wireless network
+            iwl = IWList(wiface).getList(unsecure=True, first=True)
+            for network in iwl:
+                essid = network['essid']
+                fconnected = attempt_connect(wiface, essid, None, None)
+                if fconnected:
+                    sys.exit(0)
+
+    logger.error('Could not connect to any open/cached wireless networks through iface %s - Exiting.' % (wiface))
+    sys.exit(1)

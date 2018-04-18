@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# postrm
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+case "$1" in
+    remove|upgrade)
+        # Remove config file
+        rm /etc/sudoers.d/microninja-connect_conf
+
+        if [ -e /etc/microninja_version ]; then
+
+            # Remove modprobe conf files
+            rm /etc/modprobe.d/8192cu.conf
+            rm /etc/modprobe.d/rt2800usb.conf
+
+        fi
+
+        # remove the control file to force kano-connect into multihomed
+        rm -rf /var/opt/microninja-connect/
+
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

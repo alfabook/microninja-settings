@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# postinst
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+TMP_FILE=/tmp/microninja-settings_conf
+rclocal_backup="/etc/rc.local.backup"
+
+case "$1" in
+    configure)
+
+        # Create custom sudoers file
+        echo 'Defaults!/usr/bin/microninja-settings env_keep += "SPLASH_PID SPLASH_START_TIME"' > $TMP_FILE
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/microninja-settings" > $TMP_FILE
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/microninja-settings-cli" >> $TMP_FILE
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/regenerate-ssh-keys" >> $TMP_FILE
+
+        # The owner and group for the sudoers file must both be 0
+        chown root:root $TMP_FILE
+
+        # The file permissions must be set to 0440
+        chmod 0440 $TMP_FILE
+
+        # Move the file to the sudoers directory
+        mv $TMP_FILE /etc/sudoers.d/
+
+        # Provide a libc symbolic link for dante, as it uses a hardcoded libname
+        ln -sf /lib/arm-linux-gnueabihf/libc.so.6 /lib/arm-linux-gnueabihf/libc.so
+
+        # Tighten security to the blacklist file for parental protection
+        chmod 400 /usr/share/microninja-settings/media/Parental/parental-hosts-blacklist.gz
+
+        # Save a backup copy of the original rc.local
+        if [ ! -f "$rclocal_backup" ]; then
+            mv -f /etc/rc.local /etc/rc.local.backup
+        fi
+
+        # Replace rc.local with Kano rc.local
+        cp -f /etc/microninja-rc.local /etc/rc.local
+
+        cp -r /usr/share/microninja-settings/etc_override/* /etc
+
+        # add kano-settings-onboot to startup
+        update-rc.d microninja-settings defaults
+
+        # add kano-safeboot-mode to startup
+        update-rc.d microninja-safeboot defaults
+
+        # add kano-bootup-sound to startup
+        update-rc.d microninja-bootup-sound defaults
+
+	# Check for default hostname and set to name of first user
+	# python -c "from microninja_settings.system.advanced import set_hostname_postinst; set_hostname_postinst()"
+
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

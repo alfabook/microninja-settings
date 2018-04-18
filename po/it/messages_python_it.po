@@ -1,0 +1,1449 @@
+# Italian translations for PACKAGE package.
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Marco Lorrai <microninja@microninja.me>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-11 10:57+0100\n"
+"PO-Revision-Date: 2017-12-11 11:05+0100\n"
+"Last-Translator: Marco Lorrai <microninja@microninja.me>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: microninja_settings/templates.py:52 microninja_wifi_gui/NetworkScreen.py:260
+msgid "CLOSE"
+msgstr "CHIUDI"
+
+#: microninja_settings/templates.py:206
+msgid "ADD"
+msgstr "AGGIUNGI"
+
+#: microninja_settings/templates.py:208
+msgid "REMOVE"
+msgstr "RIMUOVI"
+
+#: microninja_settings/templates.py:246
+msgid "Not a valid website"
+msgstr "Website immesso non valido"
+
+#: microninja_settings/templates.py:247
+msgid ""
+"\n"
+"We must be sure that the URL website is valid.\n"
+"Please, insert the url website how it appears in your browser.\n"
+"\n"
+"Example: http://www.google.com\n"
+msgstr ""
+"\n"
+"Dobbiamo essere certi che la URL del sito sia valida.\n"
+"Per favore, inserisci la URL così come appare nel tuo browser.\n"
+"\n"
+"Esempio: http://www.google.com\n"
+
+#: microninja_settings/parental_config.py:35
+#: microninja_settings/parental_config.py:293
+msgid "Parental control"
+msgstr "Parental control"
+
+#: microninja_settings/parental_config.py:36
+msgid "Choose your preferred protection level"
+msgstr "Configura il livello di protezione"
+
+#: microninja_settings/parental_config.py:37
+#: microninja_settings/parental_config.py:209
+#: microninja_settings/set_screensaver.py:164
+#: microninja_settings/set_audio.py:30 microninja_settings/set_keyboard.py:47
+#: microninja_settings/set_keyboard.py:99 microninja_settings/set_font.py:39
+#: microninja_settings/set_advanced.py:30 microninja_settings/set_display.py:44
+#: microninja_settings/set_display.py:160
+msgid "APPLY MODIFIES"
+msgstr "APPLICA MODIFICHE"
+
+#: microninja_settings/parental_config.py:58
+msgid "Low protection"
+msgstr "Bassa protezione"
+
+#: microninja_settings/parental_config.py:59
+msgid "Block the websites defined in the backlist"
+msgstr "Blocca i siti predefiniti in blacklist"
+
+#: microninja_settings/parental_config.py:62
+msgid "Medium protection"
+msgstr "Media protezione"
+
+#: microninja_settings/parental_config.py:63
+msgid "Use secure DNS to filter traffic"
+msgstr "Usa DNS servers sicuri per filtrare tutto il traffico"
+
+#: microninja_settings/parental_config.py:66
+msgid "High protection"
+msgstr "Alta protezione"
+
+#: microninja_settings/parental_config.py:67
+msgid "Enable all filters and restrict search engines usage"
+msgstr "Abilita tutti i filtri e restringi l'accesso ai motori di ricerca"
+
+#: microninja_settings/parental_config.py:70
+msgid "Full protection"
+msgstr "Protezione completa"
+
+#: microninja_settings/parental_config.py:71
+msgid "Block all accesses"
+msgstr "Tutti gli accessi bloccati"
+
+#: microninja_settings/parental_config.py:75
+msgid "Configure allowed/blocked websites"
+msgstr "Configura siti permessi/bloccati"
+
+#: microninja_settings/parental_config.py:143
+#: microninja_settings/main_window.py:70 microninja_settings/main_window.py:74
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: microninja_settings/parental_config.py:144
+msgid ""
+"If there is a browser opened, please restart it for this setting to take "
+"effect"
+msgstr ""
+"Se qualche browser è aperto, per favore rilancialo affinchè il settaggio "
+"abbia effetto"
+
+#: microninja_settings/parental_config.py:207
+msgid "Allow and block websites"
+msgstr "Permetti e blocca siti"
+
+#: microninja_settings/parental_config.py:208
+msgid "Add other websites to allow or block"
+msgstr "Aggiungi altri siti da bloccare o consentire"
+
+#: microninja_settings/parental_config.py:233
+msgid "Add other websites to block"
+msgstr "Aggiungi altri siti da bloccare"
+
+#: microninja_settings/parental_config.py:238
+msgid "Some blocked sites that should not be?"
+msgstr "Qualche sito bloccato che non dovrebbe esserlo?"
+
+#: microninja_settings/parental_config.py:294
+msgid "Insert password:"
+msgstr "Immetti la tua password:"
+
+#: microninja_settings/parental_config.py:308
+msgid "Retry?"
+msgstr "Riprovi?"
+
+#: microninja_settings/parental_config.py:309
+msgid "Wrong password. Cannot apply modifies"
+msgstr "La password era sbagliata. Modifiche non applicate"
+
+#: microninja_settings/set_screensaver.py:40
+msgid "Change your screensaver"
+msgstr "Cambia il tuo screensaver"
+
+#: microninja_settings/set_screensaver.py:42
+msgid "CHANGE SCREENSAVER"
+msgstr "CAMBIA SCREENSAVER"
+
+#: microninja_settings/set_screensaver.py:43
+msgid "Advanced Options"
+msgstr "Opzioni avanzate"
+
+#: microninja_settings/set_screensaver.py:162
+msgid "Screensaver - advanced"
+msgstr "Screensaver - avanzate"
+
+#: microninja_settings/set_screensaver.py:181
+msgid "Enable screensaver"
+msgstr "Abilita screensaver"
+
+#: microninja_settings/set_screensaver.py:189
+msgid ""
+"Choose the minutes\n"
+"before the start of the screensaver"
+msgstr ""
+"Imposta i minuti prima che\n"
+"si avvii lo screensaver"
+
+#: microninja_settings/set_audio.py:28 microninja_settings/screens.py:133
+msgid "Audio"
+msgstr "Audio"
+
+#: microninja_settings/set_audio.py:29
+msgid "Get audio from your speakers or from your TV"
+msgstr "Ottieni l'audio dai tuoi speaker o dalla TV"
+
+#: microninja_settings/set_audio.py:44
+msgid "Speakers"
+msgstr "Speaker"
+
+#: microninja_settings/set_audio.py:48
+msgid "TV     "
+msgstr "TV     "
+
+#: microninja_settings/set_keyboard.py:45
+#: microninja_settings/set_keyboard.py:97 microninja_settings/screens.py:129
+#: microninja_settings/screens.py:153
+msgid "Keyboard"
+msgstr "Tastiera"
+
+#: microninja_settings/set_keyboard.py:46
+msgid "Microninja keyboard found"
+msgstr "Trovata tastiera Microninja"
+
+#: microninja_settings/set_keyboard.py:98
+msgid "Where do you live? So I can set your keyboard."
+msgstr "Dove vivi? Così posso settare la tua tastiera."
+
+#: microninja_settings/set_keyboard.py:137
+#: microninja_settings/set_advanced.py:28
+msgid "Advanced options"
+msgstr "Opzioni avanzate"
+
+#: microninja_settings/set_keyboard.py:305
+#: microninja_settings/system/keyboard_config.py:64
+msgid "Generic"
+msgstr "Generica"
+
+#: microninja_settings/set_keyboard.py:354
+msgid "Countries not found"
+msgstr "Paesi non trovati"
+
+#: microninja_settings/no_internet_screen.py:33
+msgid "Close"
+msgstr "Chiudi"
+
+#: microninja_settings/no_internet_screen.py:36
+msgid "CONNECT NOW"
+msgstr "CONNETTI ORA"
+
+#: microninja_settings/no_internet_screen.py:58
+msgid "Configure your internet connection"
+msgstr "Configura la tua connessione a internet"
+
+#: microninja_settings/set_about.py:51
+msgid "Used disk space:"
+msgstr "Spazio disco utilizzato:"
+
+#: microninja_settings/set_about.py:58
+msgid "Temperature:"
+msgstr "Temperatura:"
+
+#: microninja_settings/set_about.py:61
+msgid "Model:"
+msgstr "Modello:"
+
+#: microninja_settings/set_about.py:64 microninja_settings/set_about.py:128
+msgid "Terms and conditions"
+msgstr "Termini e condizioni"
+
+#: microninja_settings/set_about.py:79 microninja_settings/set_wifi.py:102
+msgid "BACK"
+msgstr "INDIETRO"
+
+#: microninja_settings/screens.py:70
+msgid "Wallpapers and screensavers"
+msgstr "Sfondi e salvaschermi"
+
+#: microninja_settings/screens.py:78 microninja_settings/set_font.py:27
+#: microninja_settings/set_font.py:41
+msgid "Small"
+msgstr "Piccolo"
+
+#: microninja_settings/screens.py:80
+msgid "Medium"
+msgstr "Normale"
+
+#: microninja_settings/screens.py:82
+msgid "Big"
+msgstr "Grande"
+
+#: microninja_settings/screens.py:92
+msgid "Connected"
+msgstr "Connesso"
+
+#: microninja_settings/screens.py:94
+msgid "Not connected"
+msgstr "Non connesso"
+
+#: microninja_settings/screens.py:132
+msgid "Language"
+msgstr "Lingua"
+
+#: microninja_settings/screens.py:134 microninja_settings/set_display.py:42
+msgid "Screen"
+msgstr "Schermo"
+
+#: microninja_settings/screens.py:135
+msgid "WiFi"
+msgstr "WiFi"
+
+#: microninja_settings/screens.py:138
+msgid "Reset"
+msgstr "Ripristino"
+
+#: microninja_settings/screens.py:139
+msgid "Style"
+msgstr "Grafica"
+
+#: microninja_settings/screens.py:141
+msgid "Fonts"
+msgstr "Carattere"
+
+#: microninja_settings/screens.py:142
+msgid "Parental Control"
+msgstr "Parental Control"
+
+#: microninja_settings/screens.py:143
+msgid "About"
+msgstr "Informazioni"
+
+#: microninja_settings/set_wifi.py:83
+msgid "Use your browser to perform login or configure proxy"
+msgstr "Usa il browser per fare il login o configura il proxy"
+
+#: microninja_settings/set_wifi.py:85
+msgid "Configure wireless"
+msgstr "Configura wireless"
+
+#: microninja_settings/set_wifi.py:87
+msgid "Connection"
+msgstr "Connessione"
+
+#: microninja_settings/set_wifi.py:89
+msgid "WIFI"
+msgstr "WIFI"
+
+#: microninja_settings/set_wifi.py:101
+msgid "No networks found"
+msgstr "Nessuna rete trovata"
+
+#: microninja_settings/set_wifi.py:116
+msgid "COMPLETED"
+msgstr "COMPLETATO"
+
+#: microninja_settings/set_wifi.py:136 microninja_settings/set_wifi.py:142
+msgid "Connection found!"
+msgstr "Connessione trovata!"
+
+#: microninja_settings/set_wifi.py:137
+msgid "You are on wired network"
+msgstr "Sei sulla rete cablata"
+
+#: microninja_settings/set_wifi.py:143
+msgid "You are on wireless network"
+msgstr "Sei sulla rete wireless"
+
+#: microninja_settings/set_wifi.py:148 microninja_settings/set_advanced.py:94
+msgid "Configure"
+msgstr "Configura"
+
+#: microninja_settings/set_wifi.py:203
+msgid "Connected through a friend"
+msgstr "Connesso tramite un amico"
+
+#: microninja_settings/set_wifi.py:214
+msgid "IP Address"
+msgstr "Indirizzo IP"
+
+#: microninja_settings/set_wifi.py:218
+msgid "User"
+msgstr "Utente"
+
+#: microninja_settings/set_wifi.py:222
+msgid "Port"
+msgstr "Porta"
+
+#: microninja_settings/set_wifi.py:226 microninja_wifi_gui/PasswordScreen.py:75
+msgid "Password"
+msgstr "Password"
+
+#: microninja_settings/set_wifi.py:233
+msgid "enable proxy"
+msgstr "abiltia proxy"
+
+#: microninja_settings/set_wifi.py:261 microninja_settings/set_wifi.py:380
+msgid "ENABLE PROXY"
+msgstr "ABILITA PROXY"
+
+#: microninja_settings/set_wifi.py:263 microninja_settings/set_wifi.py:387
+msgid "DISABLE PROXY"
+msgstr "DISABILITA PROXY"
+
+#: microninja_settings/set_wifi.py:321
+msgid "Proxy error"
+msgstr "Errore col proxy"
+
+#: microninja_settings/set_wifi.py:329
+msgid "Proxy successfully enabled"
+msgstr "Proxy abilitato con successo"
+
+#: microninja_settings/set_wifi.py:336
+msgid "Proxy successfully disabled"
+msgstr "Proxy disabilitato con successo"
+
+#: microninja_settings/set_wallpaper.py:32
+msgid "Choose a wallpaper"
+msgstr "Scegli uno sfondo"
+
+#: microninja_settings/set_wallpaper.py:36
+msgid "TRY"
+msgstr "PROVA"
+
+#: microninja_settings/set_wallpaper.py:36
+#: microninja_wifi_gui/NetworkScreen.py:193
+#: microninja_wifi_gui/NetworkScreen.py:232
+msgid "CHOOSE"
+msgstr "SCEGLI"
+
+#: microninja_settings/set_wallpaper.py:265
+msgid "Ok! New desktop available for you."
+msgstr "Si! Hai costruito il tuo desktop."
+
+#: microninja_settings/set_wallpaper.py:266
+msgid "New background unblocked!"
+msgstr "Nuovo background sbloccato!"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+msgid "Africa"
+msgstr "Africa"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+msgid "America"
+msgstr "America"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+msgid "Asia"
+msgstr "Asia"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+#: microninja_settings/system/keyboard_layouts.py:88
+msgid "Australia"
+msgstr "Australia"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+msgid "Europe"
+msgstr "Europe"
+
+#: microninja_settings/system/keyboard_layouts.py:15
+msgid "Others"
+msgstr "Altri"
+
+#: microninja_settings/system/keyboard_layouts.py:18
+msgid "Botswana"
+msgstr "Botswana"
+
+#: microninja_settings/system/keyboard_layouts.py:19
+msgid "Congo"
+msgstr "Congo"
+
+#: microninja_settings/system/keyboard_layouts.py:20
+msgid "Etiopia"
+msgstr "Etiopia"
+
+#: microninja_settings/system/keyboard_layouts.py:21
+msgid "Ghana"
+msgstr "Ghana"
+
+#: microninja_settings/system/keyboard_layouts.py:22
+msgid "Guinea"
+msgstr "Guinea"
+
+#: microninja_settings/system/keyboard_layouts.py:23
+msgid "Kenya"
+msgstr "Kenia"
+
+#: microninja_settings/system/keyboard_layouts.py:24
+msgid "Mali"
+msgstr "Mali"
+
+#: microninja_settings/system/keyboard_layouts.py:25
+msgid "Morocco"
+msgstr "Marocco"
+
+#: microninja_settings/system/keyboard_layouts.py:26
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: microninja_settings/system/keyboard_layouts.py:27
+msgid "Senegal"
+msgstr "Senegal"
+
+#: microninja_settings/system/keyboard_layouts.py:28
+msgid "South Africa"
+msgstr "Sud Africa"
+
+#: microninja_settings/system/keyboard_layouts.py:29
+msgid "Tanzania"
+msgstr "Tanzania"
+
+#: microninja_settings/system/keyboard_layouts.py:31
+msgid "Argentina"
+msgstr "Argentina"
+
+#: microninja_settings/system/keyboard_layouts.py:32
+msgid "Bolivia"
+msgstr "Bolivia"
+
+#: microninja_settings/system/keyboard_layouts.py:33
+msgid "Brazil"
+msgstr "Brasile"
+
+#: microninja_settings/system/keyboard_layouts.py:34
+msgid "Canada"
+msgstr "Canada"
+
+#: microninja_settings/system/keyboard_layouts.py:35
+msgid "Chile"
+msgstr "Cile"
+
+#: microninja_settings/system/keyboard_layouts.py:36
+msgid "Colombia"
+msgstr "Colombia"
+
+#: microninja_settings/system/keyboard_layouts.py:37
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: microninja_settings/system/keyboard_layouts.py:38
+msgid "Cuba"
+msgstr "Cuba"
+
+#: microninja_settings/system/keyboard_layouts.py:39
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: microninja_settings/system/keyboard_layouts.py:40
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: microninja_settings/system/keyboard_layouts.py:41
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: microninja_settings/system/keyboard_layouts.py:42
+msgid "Guayana"
+msgstr "Guayana"
+
+#: microninja_settings/system/keyboard_layouts.py:43
+msgid "Haiti"
+msgstr "Haiti"
+
+#: microninja_settings/system/keyboard_layouts.py:44
+msgid "Honduras"
+msgstr "Honduras"
+
+#: microninja_settings/system/keyboard_layouts.py:45
+msgid "Mexico"
+msgstr "Messico"
+
+#: microninja_settings/system/keyboard_layouts.py:46
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: microninja_settings/system/keyboard_layouts.py:47
+msgid "Panama"
+msgstr "Panama"
+
+#: microninja_settings/system/keyboard_layouts.py:48
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: microninja_settings/system/keyboard_layouts.py:49
+msgid "Peru"
+msgstr "Peru"
+
+#: microninja_settings/system/keyboard_layouts.py:50
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: microninja_settings/system/keyboard_layouts.py:51
+msgid "Republica Dominicana"
+msgstr "Republica Dominicana"
+
+#: microninja_settings/system/keyboard_layouts.py:52
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: microninja_settings/system/keyboard_layouts.py:53
+msgid "United States"
+msgstr "Stati Uniti"
+
+#: microninja_settings/system/keyboard_layouts.py:54
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: microninja_settings/system/keyboard_layouts.py:56
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: microninja_settings/system/keyboard_layouts.py:57
+msgid "Arabic"
+msgstr "Arabia"
+
+#: microninja_settings/system/keyboard_layouts.py:58
+msgid "Armenia"
+msgstr "Armenia"
+
+#: microninja_settings/system/keyboard_layouts.py:59
+msgid "Azerbaijan"
+msgstr "Azerbaijan"
+
+#: microninja_settings/system/keyboard_layouts.py:60
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: microninja_settings/system/keyboard_layouts.py:61
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: microninja_settings/system/keyboard_layouts.py:62
+msgid "Cambodia"
+msgstr "Cambogia"
+
+#: microninja_settings/system/keyboard_layouts.py:63
+msgid "China"
+msgstr "Cina"
+
+#: microninja_settings/system/keyboard_layouts.py:64
+msgid "Georgia"
+msgstr "Georgia"
+
+#: microninja_settings/system/keyboard_layouts.py:65
+msgid "India"
+msgstr "India"
+
+#: microninja_settings/system/keyboard_layouts.py:66
+msgid "Iran"
+msgstr "Iran"
+
+#: microninja_settings/system/keyboard_layouts.py:67
+msgid "Iraq"
+msgstr "Iraq"
+
+#: microninja_settings/system/keyboard_layouts.py:68
+msgid "Israel"
+msgstr "Israele"
+
+#: microninja_settings/system/keyboard_layouts.py:69
+msgid "Japan"
+msgstr "Giappone"
+
+#: microninja_settings/system/keyboard_layouts.py:70
+msgid "Kazakhstan"
+msgstr "Kazakistan"
+
+#: microninja_settings/system/keyboard_layouts.py:71
+msgid "Kyrgyzstan"
+msgstr "Kyrgyzstan"
+
+#: microninja_settings/system/keyboard_layouts.py:72
+msgid "Korea"
+msgstr "Corea"
+
+#: microninja_settings/system/keyboard_layouts.py:73
+msgid "Laos"
+msgstr "Laos"
+
+#: microninja_settings/system/keyboard_layouts.py:74
+msgid "Maldives"
+msgstr "Maldive"
+
+#: microninja_settings/system/keyboard_layouts.py:75
+msgid "Mongolia"
+msgstr "Mongolia"
+
+#: microninja_settings/system/keyboard_layouts.py:76
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: microninja_settings/system/keyboard_layouts.py:77
+msgid "Nepal"
+msgstr "Nepal"
+
+#: microninja_settings/system/keyboard_layouts.py:78
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: microninja_settings/system/keyboard_layouts.py:79
+msgid "Philippines"
+msgstr "Filippine"
+
+#: microninja_settings/system/keyboard_layouts.py:80
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: microninja_settings/system/keyboard_layouts.py:81
+msgid "Syria"
+msgstr "Siria"
+
+#: microninja_settings/system/keyboard_layouts.py:82
+msgid "Tajikistan"
+msgstr "Tajikistan"
+
+#: microninja_settings/system/keyboard_layouts.py:83
+msgid "Thailand"
+msgstr "Tailandia"
+
+#: microninja_settings/system/keyboard_layouts.py:84
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: microninja_settings/system/keyboard_layouts.py:85
+msgid "Uzbekistan"
+msgstr "Uzbekistan"
+
+#: microninja_settings/system/keyboard_layouts.py:86
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: microninja_settings/system/keyboard_layouts.py:89
+msgid "Maori"
+msgstr "Maori"
+
+#: microninja_settings/system/keyboard_layouts.py:91
+msgid "Albania"
+msgstr "Albania"
+
+#: microninja_settings/system/keyboard_layouts.py:92
+msgid "Andorra"
+msgstr "Albania"
+
+#: microninja_settings/system/keyboard_layouts.py:93
+msgid "Austria"
+msgstr "Austria"
+
+#: microninja_settings/system/keyboard_layouts.py:94
+msgid "Belarus"
+msgstr "Bielorussia"
+
+#: microninja_settings/system/keyboard_layouts.py:95
+msgid "Belgium"
+msgstr "Belgio"
+
+#: microninja_settings/system/keyboard_layouts.py:96
+msgid "Bosnia"
+msgstr "Bosnia"
+
+#: microninja_settings/system/keyboard_layouts.py:97
+msgid "Herzegovina"
+msgstr "Erzegovina"
+
+#: microninja_settings/system/keyboard_layouts.py:98
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: microninja_settings/system/keyboard_layouts.py:99
+msgid "Croatia"
+msgstr "Croazia"
+
+#: microninja_settings/system/keyboard_layouts.py:100
+msgid "Czech Republic"
+msgstr "Repubblica Ceca"
+
+#: microninja_settings/system/keyboard_layouts.py:101
+msgid "Denmark"
+msgstr "Danimarca"
+
+#: microninja_settings/system/keyboard_layouts.py:102
+msgid "Estonia"
+msgstr "Estonia"
+
+#: microninja_settings/system/keyboard_layouts.py:103
+msgid "Faroe Islands"
+msgstr "Isole Faroe"
+
+#: microninja_settings/system/keyboard_layouts.py:104
+msgid "Finland"
+msgstr "Finlandia"
+
+#: microninja_settings/system/keyboard_layouts.py:105
+msgid "France"
+msgstr "Francia"
+
+#: microninja_settings/system/keyboard_layouts.py:106
+msgid "Germany"
+msgstr "Germania"
+
+#: microninja_settings/system/keyboard_layouts.py:107
+msgid "Greece"
+msgstr "Grecia"
+
+#: microninja_settings/system/keyboard_layouts.py:108
+msgid "Hungary"
+msgstr "Ungheria"
+
+#: microninja_settings/system/keyboard_layouts.py:109
+msgid "Iceland"
+msgstr "Islanda"
+
+#: microninja_settings/system/keyboard_layouts.py:110
+msgid "Italy"
+msgstr "Italia"
+
+#: microninja_settings/system/keyboard_layouts.py:111
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: microninja_settings/system/keyboard_layouts.py:112
+msgid "Latvia"
+msgstr "Lettonia"
+
+#: microninja_settings/system/keyboard_layouts.py:113
+msgid "Lithuania"
+msgstr "Lituania"
+
+#: microninja_settings/system/keyboard_layouts.py:114
+msgid "Macedonia"
+msgstr "Macedonia"
+
+#: microninja_settings/system/keyboard_layouts.py:115
+msgid "Malta"
+msgstr "Malta"
+
+#: microninja_settings/system/keyboard_layouts.py:116
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: microninja_settings/system/keyboard_layouts.py:117
+msgid "Netherlands"
+msgstr "Olanda"
+
+#: microninja_settings/system/keyboard_layouts.py:118
+msgid "Norway"
+msgstr "Norvegia"
+
+#: microninja_settings/system/keyboard_layouts.py:119
+msgid "Poland"
+msgstr "Polonia"
+
+#: microninja_settings/system/keyboard_layouts.py:120
+msgid "Portugal"
+msgstr "Portogallo"
+
+#: microninja_settings/system/keyboard_layouts.py:121
+msgid "Romania"
+msgstr "Romania"
+
+#: microninja_settings/system/keyboard_layouts.py:122
+msgid "Russia"
+msgstr "Russia"
+
+#: microninja_settings/system/keyboard_layouts.py:123
+msgid "Serbia"
+msgstr "Serbia"
+
+#: microninja_settings/system/keyboard_layouts.py:124
+msgid "Slovakia"
+msgstr "Slovacchia"
+
+#: microninja_settings/system/keyboard_layouts.py:125
+msgid "Slovenia"
+msgstr "Slovenia"
+
+#: microninja_settings/system/keyboard_layouts.py:126
+msgid "Spain"
+msgstr "Spagna"
+
+#: microninja_settings/system/keyboard_layouts.py:127
+msgid "Sweden"
+msgstr "Svezia"
+
+#: microninja_settings/system/keyboard_layouts.py:128
+msgid "Switzerland"
+msgstr "Svizzera"
+
+#: microninja_settings/system/keyboard_layouts.py:129
+msgid "Turkey"
+msgstr "Turchia"
+
+#: microninja_settings/system/keyboard_layouts.py:130
+msgid "Ukraine"
+msgstr "Ucraina"
+
+#: microninja_settings/system/keyboard_layouts.py:131
+msgid "United Kingdom"
+msgstr "Regno Unito"
+
+#: microninja_settings/system/keyboard_layouts.py:133
+msgid "Braille"
+msgstr "Braille"
+
+#: microninja_settings/system/keyboard_layouts.py:134
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: microninja_settings/system/keyboard_layouts.py:617
+msgid "Dead acute"
+msgstr "Acuto muto"
+
+#: microninja_settings/system/keyboard_layouts.py:618
+msgid "Dead grave acute"
+msgstr "Acuto grave muto"
+
+#: microninja_settings/system/keyboard_layouts.py:619
+#: microninja_settings/system/keyboard_layouts.py:649
+#: microninja_settings/system/keyboard_layouts.py:675
+#: microninja_settings/system/keyboard_layouts.py:684
+#: microninja_settings/system/keyboard_layouts.py:1031
+msgid "Dvorak"
+msgstr "Dvorak"
+
+#: microninja_settings/system/keyboard_layouts.py:620
+#: microninja_settings/system/keyboard_layouts.py:650
+#: microninja_settings/system/keyboard_layouts.py:676
+#: microninja_settings/system/keyboard_layouts.py:794
+#: microninja_settings/system/keyboard_layouts.py:917
+msgid "Eliminate dead keys"
+msgstr "Elimina tasti muti"
+
+#: microninja_settings/system/keyboard_layouts.py:621
+msgid "Lower Sorbian"
+msgstr "Sorabo inferiore"
+
+#: microninja_settings/system/keyboard_layouts.py:622
+msgid "Lower Sorbian (qwertz)"
+msgstr "Sorabo inferiore (qwertz)"
+
+#: microninja_settings/system/keyboard_layouts.py:623
+#: microninja_settings/system/keyboard_layouts.py:652
+#: microninja_settings/system/keyboard_layouts.py:678
+#: microninja_settings/system/keyboard_layouts.py:688
+#: microninja_settings/system/keyboard_layouts.py:796
+#: microninja_settings/system/keyboard_layouts.py:918
+#: microninja_settings/system/keyboard_layouts.py:1038
+msgid "Macintosh"
+msgstr "Macintosh"
+
+#: microninja_settings/system/keyboard_layouts.py:624
+#: microninja_settings/system/keyboard_layouts.py:920
+msgid "Macintosh, eliminate dead keys"
+msgstr "Macintosh, elimina tasti muti"
+
+#: microninja_settings/system/keyboard_layouts.py:625
+msgid "Neo 2"
+msgstr "Neo 2"
+
+#: microninja_settings/system/keyboard_layouts.py:626
+msgid "Romanian keyboard with German letters"
+msgstr "Tastiera rumena con lettere tedesche"
+
+#: microninja_settings/system/keyboard_layouts.py:627
+msgid "Romanian keyboard with German letters, eliminate dead keys"
+msgstr "Tastiera rumena con lettere tedesche, tasti muti rimossi"
+
+#: microninja_settings/system/keyboard_layouts.py:628
+#: microninja_settings/system/keyboard_layouts.py:1041
+msgid "Russian phonetic"
+msgstr "Fonetica russa"
+
+#: microninja_settings/system/keyboard_layouts.py:629
+#: microninja_settings/system/keyboard_layouts.py:653
+#: microninja_settings/system/keyboard_layouts.py:680
+#: microninja_settings/system/keyboard_layouts.py:924
+msgid "Sun dead keys"
+msgstr "Tasti muti Sun"
+
+#: microninja_settings/system/keyboard_layouts.py:630
+msgid "qwerty"
+msgstr "qwerty"
+
+#: microninja_settings/system/keyboard_layouts.py:647
+msgid "Asturian variant with bottom-dot H and bottom-dot L"
+msgstr "Variante asturiana con H punto sottoscritto e L punto sottoscritto"
+
+#: microninja_settings/system/keyboard_layouts.py:648
+msgid "Catalan variant with middle-dot L"
+msgstr "Variante catalano con L middle-dot"
+
+#: microninja_settings/system/keyboard_layouts.py:651
+msgid "Include dead tilde"
+msgstr "Tilde muta inclusa"
+
+#: microninja_settings/system/keyboard_layouts.py:665
+msgid "(Legacy) Alternative"
+msgstr "Alternativa (vecchia maniera)"
+
+#: microninja_settings/system/keyboard_layouts.py:666
+msgid "(Legacy) Alternative, Sun dead keys"
+msgstr "Alternativa, tasti muti Sun (vecchia maniera)"
+
+#: microninja_settings/system/keyboard_layouts.py:667
+msgid "(Legacy) Alternative, eliminate dead keys"
+msgstr "Alternativa, tasti muti rimossi (vecchia maniera)"
+
+#: microninja_settings/system/keyboard_layouts.py:668
+msgid "Alternative"
+msgstr "Alternativa"
+
+#: microninja_settings/system/keyboard_layouts.py:669
+msgid "Alternative, Sun dead keys"
+msgstr "Alternativa, tasti muti Sun"
+
+#: microninja_settings/system/keyboard_layouts.py:670
+msgid "Alternative, eliminate dead keys"
+msgstr "Alternativa, tasti muti rimossi"
+
+#: microninja_settings/system/keyboard_layouts.py:671
+msgid "Alternative, latin-9 only"
+msgstr "Alternativa, solo latin-9"
+
+#: microninja_settings/system/keyboard_layouts.py:672
+msgid "Bepo, ergonomic, Dvorak way"
+msgstr "Bepo, ergonomica, tipo Dvorak"
+
+#: microninja_settings/system/keyboard_layouts.py:673
+msgid "Bepo, ergonomic, Dvorak way, latin-9 only"
+msgstr "Bepo, ergonomica, tipo Dvorak, solo latin-9"
+
+#: microninja_settings/system/keyboard_layouts.py:674
+msgid "Breton"
+msgstr "Bretone"
+
+#: microninja_settings/system/keyboard_layouts.py:677
+msgid "Georgian AZERTY Tskapo"
+msgstr "Georgiana AZERTY Tskapo"
+
+#: microninja_settings/system/keyboard_layouts.py:679
+msgid "Occitan"
+msgstr "Occitana"
+
+#: microninja_settings/system/keyboard_layouts.py:683
+#: microninja_settings/system/keyboard_layouts.py:1030
+msgid "Colemak"
+msgstr "Colemak"
+
+#: microninja_settings/system/keyboard_layouts.py:685
+msgid "Dvorak (UK Punctuation)"
+msgstr "Dvorak (punteggiatura UK)"
+
+#: microninja_settings/system/keyboard_layouts.py:686
+msgid "Extended - Winkeys"
+msgstr "Estesa - tasti Win"
+
+#: microninja_settings/system/keyboard_layouts.py:687
+#: microninja_settings/system/keyboard_layouts.py:1035
+msgid "International (with dead keys)"
+msgstr "Internazionale (con tasti muti)"
+
+#: microninja_settings/system/keyboard_layouts.py:689
+msgid "Macintosh (International)"
+msgstr "Macintosh (Internationale)"
+
+#: microninja_settings/system/keyboard_layouts.py:795
+msgid "Georgian"
+msgstr "Georgiana"
+
+#: microninja_settings/system/keyboard_layouts.py:797
+msgid "US keyboard with Italian letters"
+msgstr "Tastiera americana con lettere italiane"
+
+#: microninja_settings/system/keyboard_layouts.py:919
+msgid "Macintosh, Sun dead keys"
+msgstr "Macintosh, tasti muti Sun"
+
+#: microninja_settings/system/keyboard_layouts.py:921
+msgid "Nativo"
+msgstr "Nativo"
+
+#: microninja_settings/system/keyboard_layouts.py:922
+msgid "Nativo for Esperanto"
+msgstr "Nativo per Esperanto"
+
+#: microninja_settings/system/keyboard_layouts.py:923
+msgid "Nativo for USA keyboards"
+msgstr "Nativo per tastiere USA"
+
+#: microninja_settings/system/keyboard_layouts.py:1027
+msgid "Alternative international"
+msgstr "Internazionale alternativa"
+
+#: microninja_settings/system/keyboard_layouts.py:1028
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: microninja_settings/system/keyboard_layouts.py:1029
+msgid "Classic Dvorak"
+msgstr "Dvorak classica"
+
+#: microninja_settings/system/keyboard_layouts.py:1032
+msgid "Dvorak alternative international (no dead keys)"
+msgstr "Internazionale alternativa dvorak (no tasti muti)"
+
+#: microninja_settings/system/keyboard_layouts.py:1033
+msgid "Dvorak international (with dead keys)"
+msgstr "Internazionale alternativa dvorak (con tasti muti)"
+
+#: microninja_settings/system/keyboard_layouts.py:1034
+msgid "International (AltGr dead keys)"
+msgstr "Internazionale (tasti muti AltGr)"
+
+#: microninja_settings/system/keyboard_layouts.py:1036
+msgid "Layout toggle on multiply/divide key"
+msgstr "Commuta gruppo sul tasto moltiplica/dividi"
+
+#: microninja_settings/system/keyboard_layouts.py:1037
+msgid "Left handed Dvorak"
+msgstr "Dvorak per mancini"
+
+#: microninja_settings/system/keyboard_layouts.py:1039
+msgid "Programmer Dvorak"
+msgstr "Dvorak per programmatori"
+
+#: microninja_settings/system/keyboard_layouts.py:1040
+msgid "Right handed Dvorak"
+msgstr "Dvorak per destrorsi"
+
+#: microninja_settings/system/keyboard_layouts.py:1042
+msgid "Serbo-Croatian"
+msgstr "Serbo-Croata"
+
+#: microninja_settings/system/keyboard_layouts.py:1043
+msgid "With EuroSign on 5"
+msgstr "Con simbolo € sul 5"
+
+#: microninja_settings/system/account.py:62
+msgid "Wait..."
+msgstr "Attendere..."
+
+#: microninja_settings/system/account.py:63
+msgid "The system will reboot automatically"
+msgstr "Il sistema verrà riavviato automaticamente"
+
+#: microninja_settings/system/locale.py:109
+#: microninja_settings/system/locale.py:123
+msgid "You need to be root to install a locale"
+msgstr "Devi essete root per installare una localizzazione"
+
+#: microninja_settings/set_style.py:47
+msgid "WALLPAPER"
+msgstr "SFONDO"
+
+#: microninja_settings/set_style.py:48
+msgid "SCREENSAVER"
+msgstr "SALVASCHERMO"
+
+#: microninja_settings/set_style.py:49
+msgid "GENERAL"
+msgstr "GENERALE"
+
+#: microninja_settings/set_style.py:83
+msgid "RESET YOUR DESKTOP"
+msgstr "REIMPOSTA IL DESKTOP"
+
+#: microninja_settings/set_style.py:97
+msgid "This will reset your wallpaper and your toolbar."
+msgstr "Questo reimposterà il tuo wallpaper e la toolbar."
+
+#: microninja_settings/set_style.py:98
+msgid "Do you want to continue?"
+msgstr "Vuoi continuare?"
+
+#: microninja_settings/set_style.py:101
+msgid "YES"
+msgstr "SI"
+
+#: microninja_settings/set_style.py:106
+msgid "NO"
+msgstr "NO"
+
+#: microninja_settings/set_font.py:27 microninja_settings/set_font.py:42
+msgid "Normal"
+msgstr "Medio"
+
+#: microninja_settings/set_font.py:27 microninja_settings/set_font.py:43
+msgid "Large"
+msgstr "Grande"
+
+#: microninja_settings/set_font.py:37
+msgid "Font"
+msgstr "Carattere"
+
+#: microninja_settings/set_font.py:38
+msgid "Choose a comfortable font size"
+msgstr "Scegli una dimensione del testo confortevole"
+
+#: microninja_settings/set_font.py:41
+msgid "SUGGESTED FOR SMALL SCREENS"
+msgstr "CONSIGLIATO PER SCHERMI PICCOLI"
+
+#: microninja_settings/set_font.py:42
+msgid "DEFAULT"
+msgstr "PREDEFINITO"
+
+#: microninja_settings/set_font.py:43
+msgid "SUGGESTED FOR BIG SCREENS"
+msgstr "CONSIGLIATO PER SCHERMI GRANDI"
+
+#: microninja_settings/set_advanced.py:29
+msgid "Enable and configure parental control"
+msgstr "Abilita e configura il parental control"
+
+#: microninja_settings/set_advanced.py:69
+msgid ""
+"Use different configurations to:\n"
+"- Block adult contents in your browser and Youtube\n"
+"- Block internet access"
+msgstr ""
+"Usa livelli differenti per:\n"
+"- Bloccare contenuto per adulti nel browser e in Youtube\n"
+"- O bloccare l'accesso a internet"
+
+#: microninja_settings/set_advanced.py:77
+msgid "Enable parental control"
+msgstr "Abilita parental control"
+
+#: microninja_settings/set_advanced.py:155
+msgid "Enabled"
+msgstr "Abilitato"
+
+#: microninja_settings/set_advanced.py:160
+msgid "Disabled"
+msgstr "Disabilitato"
+
+#: microninja_settings/set_advanced.py:197
+msgid "Disable parental control"
+msgstr "Disabilita parental control"
+
+#: microninja_settings/set_advanced.py:198
+#: microninja_settings/set_advanced.py:205
+msgid "Insert your password"
+msgstr "Inserisci password"
+
+#: microninja_settings/set_advanced.py:199
+msgid "UNBLOCK"
+msgstr "SBLOCCA"
+
+#: microninja_settings/set_advanced.py:214
+msgid "Configure parental control"
+msgstr "Configura parental control"
+
+#: microninja_settings/set_advanced.py:215
+msgid "Choose a password"
+msgstr "Scegli una password"
+
+#: microninja_settings/set_advanced.py:216
+msgid "BLOCK"
+msgstr "BLOCCA"
+
+#: microninja_settings/set_advanced.py:222
+msgid "Select password"
+msgstr "Seleziona password"
+
+#: microninja_settings/set_advanced.py:226
+msgid "Confirm password"
+msgstr "Conferma password"
+
+#: microninja_settings/set_advanced.py:295
+msgid "Warning"
+msgstr "Attenzione"
+
+#: microninja_settings/set_advanced.py:296
+msgid "Inserted passwords do not match. Try again"
+msgstr "Le password non corrispondono! Prova di nuovo"
+
+#: microninja_settings/set_advanced.py:326
+msgid "GO BACK"
+msgstr "TORNA INDIETRO"
+
+#: microninja_settings/set_advanced.py:331
+#: microninja_wifi_gui/ConnectToNetwork.py:72
+msgid "TRY AGAIN"
+msgstr "RIPROVA"
+
+#: microninja_settings/set_advanced.py:364
+#: microninja_wifi_gui/ConnectToNetwork.py:98
+msgid "Success"
+msgstr "Successo"
+
+#: microninja_settings/set_advanced.py:366
+msgid "Error"
+msgstr "Errore"
+
+#: microninja_settings/main_window.py:134
+msgid "Reboot?"
+msgstr "Riavvia?"
+
+#: microninja_settings/main_window.py:135
+msgid "Microninja needs to reboot for the changes to take effect"
+msgstr ""
+"Il tuo Microninja ha bisogno del riavvio per poter applicare i cambiamenti"
+
+#: microninja_settings/main_window.py:138
+msgid "LATER"
+msgstr "PIU' TARDI"
+
+#: microninja_settings/main_window.py:143
+msgid "REBOOT NOW"
+msgstr "RIAVVIA ORA"
+
+#: microninja_settings/locale.py:28
+msgid "Language setting"
+msgstr "Impostazioni lingua"
+
+#: microninja_settings/locale.py:29
+msgid "Choose system language (A reboot is needed)"
+msgstr "Scegli la lingua del sistema (Richiede un riavvio)"
+
+#: microninja_settings/locale.py:30
+msgid "APPLY CHANGES"
+msgstr "APPLICA MODIFICHE"
+
+#: microninja_settings/set_display.py:31
+msgid "(A reboot is requested after this modify)"
+msgstr "(Modificare questo richiede un riavvio)"
+
+#: microninja_settings/set_display.py:36
+msgid ""
+"\n"
+"\n"
+"Present resolution:"
+msgstr ""
+"\n"
+"\n"
+"Risoluzione attuale:"
+
+#: microninja_settings/set_display.py:81 microninja_settings/set_display.py:226
+#: microninja_settings/set_display.py:315
+msgid "Overscan"
+msgstr "Overscan"
+
+#: microninja_settings/set_display.py:88
+msgid "Upturn screen"
+msgstr "Capovolgi schermo"
+
+#: microninja_settings/set_display.py:227
+msgid "This setting permits you to change screen size."
+msgstr "Questo settaggio permette di modificare le dimensioni dello schermo."
+
+#: microninja_settings/set_display.py:258
+msgid "Advanced"
+msgstr "Avanzato"
+
+#: microninja_settings/set_display.py:316
+msgid "This setting permits you to change screen size, from border to border"
+msgstr ""
+"Questo settaggio permette di modificare le dimensioni dello schermo, da "
+"bordo a bordo."
+
+#: microninja_settings/set_account.py:68
+msgid "RESET TO FACTORY SETTINGS"
+msgstr "RIPORTA ALLE IMPOSTAZIONI DI FABBRICA"
+
+#: microninja_settings/set_account.py:85
+msgid "Factory settings"
+msgstr "Impostazioni predefinite"
+
+#: microninja_settings/set_account.py:86
+msgid "Reset system to factory settings"
+msgstr "Ripristina le configurazioni iniziali"
+
+#: microninja_settings/set_account.py:162
+msgid "Are you sure do you want to restore the system?"
+msgstr "Sei sicuro di voler ripristinare questo sistema?"
+
+#: microninja_settings/set_account.py:163
+msgid ""
+"Warning: this operation will erase all data and documents.\n"
+"Several minutes may be required."
+msgstr ""
+"Attenzione: questa operazione cancellerà tutti i documenti presenti sul "
+"dispositivo.\n"
+"L'operazione potrebbe richiedere qualche minuto."
+
+#: microninja_settings/set_account.py:166
+msgid "CANCEL"
+msgstr "ANNULLA"
+
+#: microninja_wifi_gui/PasswordScreen.py:55
+msgid "Internet access"
+msgstr "Accesso ad internet"
+
+#: microninja_wifi_gui/PasswordScreen.py:88
+#: microninja_wifi_gui/NetworkScreen.py:266
+msgid "CONNECT"
+msgstr "CONNETTI"
+
+#: microninja_wifi_gui/PasswordScreen.py:95
+msgid "Show password"
+msgstr "Mostra password"
+
+#: microninja_wifi_gui/PasswordScreen.py:117
+msgid "Wrong password"
+msgstr "Password errata"
+
+#: microninja_wifi_gui/PasswordScreen.py:159
+msgid "Success!"
+msgstr "Successo!"
+
+#: microninja_wifi_gui/PasswordScreen.py:160
+msgid "You are now connected"
+msgstr "Sei connesso"
+
+#: microninja_wifi_gui/PasswordScreen.py:163
+msgid "OK"
+msgstr "OK"
+
+#: microninja_wifi_gui/RefreshNetworks.py:27
+msgid "Search networks"
+msgstr "Ricerca reti"
+
+#: microninja_wifi_gui/RefreshNetworks.py:28
+#: microninja_wifi_gui/ConnectToNetwork.py:39
+msgid "From now"
+msgstr "Da ora"
+
+#: microninja_wifi_gui/NetworkScreen.py:59
+msgid "WiFi Connection"
+msgstr "Connessione WiFi"
+
+#: microninja_wifi_gui/NetworkScreen.py:60
+msgid "Choose a network"
+msgstr "Scegli una rete"
+
+#: microninja_wifi_gui/NetworkScreen.py:114
+msgid "No network found!"
+msgstr "Nessuna rete trovata!"
+
+#: microninja_wifi_gui/NetworkScreen.py:209
+msgid "Skip"
+msgstr "Salta"
+
+#: microninja_wifi_gui/NetworkScreen.py:239
+msgid "DISCONNECT"
+msgstr "DISCONNESSO"
+
+#: microninja_wifi_gui/NetworkScreen.py:256
+msgid "Disconnection completed."
+msgstr "Disconnessione completata."
+
+#: microninja_wifi_gui/NetworkScreen.py:257
+msgid "You are offline"
+msgstr "Sei offline"
+
+#: microninja_wifi_gui/ConnectToNetwork.py:38
+msgid "Connect to"
+msgstr "Connetti a"
+
+#: microninja_wifi_gui/ConnectToNetwork.py:65
+msgid "Connection failed!"
+msgstr "Connessione fallita"
+
+#: microninja_wifi_gui/ConnectToNetwork.py:66
+msgid "Perhaps the signal was too weak to connect."
+msgstr "Forse il segnale era troppo debole per connettersi."
+
+#: microninja_wifi_gui/ConnectToNetwork.py:79
+msgid "QUIT"
+msgstr "ESCI"
+
+#: microninja_wifi_gui/ConnectToNetwork.py:99
+msgid "You are connected"
+msgstr "Sei connesso"

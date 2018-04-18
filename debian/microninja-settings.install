@@ -1,0 +1,35 @@
+bin/microninja-settings /usr/bin
+bin/microninja-settings-cli /usr/bin
+bin/startmouse /usr/bin
+bin/microninja-settings-onboot /usr/bin
+bin/microninja-safeboot-mode /usr/bin
+bin/microninja-userdel /usr/bin
+bin/microninja-usersdel /usr/bin
+bin/regenerate-ssh-keys /usr/bin
+bin/start-sentry-server /usr/bin
+
+microninja_settings/* /usr/lib/python2.7/dist-packages/microninja_settings
+microninja_profile/* /usr/lib/python2.7/dist-packages/microninja_profile
+media/microninja-settings/* /usr/share/microninja-settings/media
+
+icon/settings.app /usr/share/applications/
+icon/microninja-settings.png /usr/share/icons/microninja/66x66/apps/
+icon/settings-widget.png /usr/share/microninja-settings
+
+lxpanel-plugin/microninja_settings.so usr/lib/arm-linux-gnueabihf/lxpanel/plugins/
+
+etc/microninja-rc.local /etc
+etc/rc.network /etc
+etc/rc.overclock /etc
+etc/rc.others /etc
+etc/init.d /etc
+etc/microninja_version /etc
+
+etc_override /usr/share/microninja-settings
+
+overscan/overscan /usr/bin
+
+WHITELIST /usr/share/microninja-settings/config/
+
+po/it/microninja_settings_plugins.mo /usr/share/locale/microninja/microninja-settings/it/LC_MESSAGES/
+po/it/messages_python_it.mo /usr/share/locale/microninja/microninja-settings

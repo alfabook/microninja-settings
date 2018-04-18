@@ -1,0 +1,79 @@
+# Italian translations for PACKAGE package.
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Marco Lorrai <microninja@microninja.me>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-07 13:18+0100\n"
+"PO-Revision-Date: 2017-12-07 13:25+0100\n"
+"Last-Translator: Marco Lorrai <microninja@microninja.me>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. Mouse button
+#. GtkWidget* mouse_item = gtk_image_menu_item_new_with_label(_("Mouse"));
+#. g_signal_connect(mouse_item, "activate", G_CALLBACK(settings_clicked), "1");
+#. gtk_menu_append(GTK_MENU(menu), mouse_item);
+#. gtk_widget_show(mouse_item);
+#. gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(mouse_item), get_resized_icon(MOUSE_ICON));
+#. Audio button
+#: lxpanel-plugin/microninja_settings.c:167
+msgid "Audio"
+msgstr "Audio"
+
+#: lxpanel-plugin-internet/microninja_internet.c:266
+msgid "Connect"
+msgstr "Connetti"
+
+#. Internet working correctly, change the picture accordingly
+#: lxpanel-plugin-internet/microninja_internet.c:274
+msgid "Connected"
+msgstr "Connesso"
+
+#. Add the option to disconnect from the internet.
+#: lxpanel-plugin-internet/microninja_internet.c:281
+msgid "Disconnect"
+msgstr "Disconnetti"
+
+#: lxpanel-plugin-internet/microninja_internet.c:114
+msgid "Internet connection status"
+msgstr "Stato della connessione ad internet"
+
+#. Keyboard button
+#: lxpanel-plugin/microninja_settings.c:155
+msgid "Keyboard"
+msgstr "Tastiera"
+
+#: lxpanel-plugin/microninja_settings.c:90
+msgid "Microninja Settings"
+msgstr "Impostazioni Microninja"
+
+#. Change the widget's picture, menu title and add the option to try and connect to internet
+#: lxpanel-plugin-internet/microninja_internet.c:261
+msgid "Not connected"
+msgstr "Non connesso"
+
+#. Display button
+#: lxpanel-plugin/microninja_settings.c:173
+msgid "Screen"
+msgstr "Schermo"
+
+#. Create the menu items
+#. All button
+#: lxpanel-plugin/microninja_settings.c:149
+#: lxpanel-plugin/microninja_settings.c:185
+msgid "Settings"
+msgstr "Impostazioni"
+
+#. WiFi button
+#: lxpanel-plugin/microninja_settings.c:179
+msgid "WiFi"
+msgstr "WiFi"

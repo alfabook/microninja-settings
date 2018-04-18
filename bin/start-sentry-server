@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+
+# start-sentry-server
+#
+# Copyright (C) 2014-2015 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# Start the server on the first boot.
+#
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+import sys
+import os
+from microninja_settings.system.advanced import (sentry_config,
+                                           parse_whitelist_to_config_file,
+                                           launch_sentry_server)
+from microninja_settings.common import settings_dir
+from microninja.logging import logger
+
+
+def check_config():
+    # Look at the setting to find the parental level
+    ultimate_parental = False
+
+    settings_config = os.path.join(settings_dir, 'settings')
+    if not os.path.exists(settings_config):
+        logger.debug("Settings config file {} does not exist, not turning on parental control".format(settings_config))
+        sys.exit(1)
+
+    f = open(settings_config, 'r')
+
+    # Check if the parental control is at the highest level 3.0
+    for line in f:
+        line = line.strip()
+        if '"Parental-level": 3.0' in line:
+            ultimate_parental = True
+            logger.debug("Ultimate parental control set in line {}".format(line))
+        else:
+            logger.debug("Ultimate parental control is NOT set in line {}".format(line))
+
+    # If the parental is at the highest level, start the sentry server
+    if ultimate_parental:
+        # Functions contain logs
+        parse_whitelist_to_config_file(sentry_config)
+        launch_sentry_server(sentry_config)
+        sys.exit(0)
+
+    # If you don't switch on the parental lock, return 1
+    sys.exit(1)
+
+
+if __name__ == "__main__":
+    check_config()

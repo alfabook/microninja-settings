@@ -1,0 +1,223 @@
+microninja-settings (2.6.6) unstable; urgency=low
+
+  * Dependencies bugfix
+
+ -- Alfabook srl <info@scuolabook.it>  Mon, 11 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.5) unstable; urgency=low
+
+  * Added microninja-locale dependency
+
+ -- Alfabook srl <info@scuolabook.it>  Mon, 11 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.4) unstable; urgency=low
+
+  * Added microninja-toolset dependency
+
+ -- Alfabook srl <info@scuolabook.it>  Mon, 11 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.3) unstable; urgency=low
+
+  * Bugfix in plugin localization (added locale setting in show menu)
+
+ -- Alfabook srl <info@scuolabook.it>  Mon, 11 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.2) unstable; urgency=low
+
+  * Addng translation for account.py reboot message
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 11 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.1) unstable; urgency=low
+
+  * Status bar tooltip internet plugin
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 4 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.6.0) unstable; urgency=low
+
+  * Removing menu cache for localization
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 4 Dec 2017 12:58:00 +0000
+
+microninja-settings (2.5.9) unstable; urgency=low
+
+  * Adding Portuguese, internationalization ready
+
+ -- Scuolabook srl <info@scuolabook.it>  Thu, 17 Nov 2017 12:58:00 +0000
+
+microninja-settings (2.5.8) unstable; urgency=low
+
+  * Preparing for internationalization / localization
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 14 Nov 2017 12:58:00 +0000
+
+microninja-settings (2.5.7) unstable; urgency=low
+
+  * Changed information icon
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 9 Oct 2017 12:58:00 +0000
+
+microninja-settings (2.5.6) unstable; urgency=low
+
+  * Translation fix
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5.5) unstable; urgency=low
+
+  * Fixed mouse blocked during restart request
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5.4) unstable; urgency=low
+
+  * Button re aligned in users
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5.3) unstable; urgency=low
+
+  * Calling microninja.script
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5.2) unstable; urgency=low
+
+  * Pi3 recognized; spelling mistake on resetting system
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5.1) unstable; urgency=low
+
+  * Added reset to factory button
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.5) unstable; urgency=low
+
+  * Italian translation for counties in keyboard configuration
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.4) unstable; urgency=low
+
+  * Profile bugfixes
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.3) unstable; urgency=low
+
+  * New profile
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+microninja-settings (2.2-2) unstable; urgency=low
+
+  * Changes on Parental Control
+
+ -- Scuolabook srl <info@scuolabook.it>  Mon, 5 Apr 2016 12:58:00 +0000
+
+kano-settings (2.2-1) unstable; urgency=low
+
+  * Adding Gtk.Plug support
+
+ -- Team Kano <dev@kano.me>  Wed, 26 Aug 2015 17:22:00 +0000
+
+kano-settings (2.0-3) unstable; urgency=low
+
+  * Add Midori/Youtube cookie functionality
+
+ -- Team Kano <dev@kano.me>  Mon, 29 Jun 2015 14:49:00 +0000
+
+kano-settings (2.0-2) unstable; urgency=low
+
+  * Add ability to set hostname
+
+ -- Team Kano <dev@kano.me>  Fri, 24 Apr 2015 15:49:00 +0000
+
+kano-settings (2.0-1) unstable; urgency=low
+
+  * Adding the new background selector for the initflow
+
+ -- Team Kano <dev@kano.me>  Fri, 24 Apr 2015 15:49:00 +0000
+
+kano-settings (1.3-3) unstable; urgency=low
+
+  * support for the new kano-init
+
+ -- Team Kano <dev@kano.me>  Fri, 27 Mar 2015 15:05:00 +0000
+
+kano-settings (1.3-2) unstable; urgency=low
+
+  * Added Option to restore users customized LXPanels to original settings
+
+ -- Team Kano <dev@kano.me>  Wed, 26 Nov 2014 14:45:00 +0000
+
+kano-settings (1.3-2) unstable; urgency=low
+
+  * Allow kano-settings to close splash screens.
+
+ -- Team Kano <dev@kano.me>  Wed, 26 Nov 2014 14:45:00 +0000
+
+kano-settings (1.3-1) unstable; urgency=low
+
+  * Added No Internet screen
+
+ -- Team Kano <dev@kano.me>  Wed, 26 Nov 2014 14:45:00 +0000
+
+kano-settings (1.2.2-1) unstable; urgency=low
+
+  * Refactoring system-related functions
+
+ -- Team Kano <dev@kano.me>  Wed, 18 Sep 2014 11:45:00 +0000
+
+kano-settings (1.1-2) unstable; urgency=low
+
+  * kano-uixinit removed
+
+ -- Team Kano <dev@kano.me>  Wed, 13 May 2014 18:11:00 +0000
+
+kano-settings (1.1-1) unstable; urgency=low
+
+  * Merged with the kano-connect scripts
+  * The connect scripts are now a subpackage of kano-settings
+
+ -- Team Kano <dev@kano.me>  Wed, 26 Mar 2014 15:59:19 +0000
+
+kano-settings (1.0-7) unstable; urgency=low
+
+  * Package rebuilt, updated to revision 77f4b499.
+
+ -- Team Kano <dev@kano.me>  Tue, 04 Mar 2014 11:00:32 +0000
+
+kano-settings (1.0-6) unstable; urgency=low
+
+  * Package rebuilt, updated to revision bb1c6e46.
+
+ -- Team Kano <dev@kano.me>  Mon, 03 Mar 2014 21:02:12 +0000
+
+kano-settings (1.0-5) unstable; urgency=low
+
+  * Package rebuilt, updated to revision 54f93581.
+
+ -- Team Kano <dev@kano.me>  Mon, 03 Mar 2014 17:31:06 +0000
+
+kano-settings (1.0-4) unstable; urgency=low
+
+  * Package rebuilt, updated to revision 789f27ea.
+
+ -- Team Kano <dev@kano.me>  Mon, 03 Mar 2014 16:48:55 +0000
+
+kano-settings (1.0-3) unstable; urgency=low
+
+  * Package rebuilt, updated to revision 971a910c.
+
+ -- Team Kano <dev@kano.me>  Mon, 03 Mar 2014 14:18:10 +0000
+
+kano-settings (1.0-2) unstable; urgency=low
+
+  [ Team Kano ]
+  * Package rebuilt, updated to revision 52a5cb59.
+
+ -- Team Kano <dev@kano.me>  Mon, 03 Mar 2014 13:59:12 +0000

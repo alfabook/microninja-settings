@@ -1,0 +1,252 @@
+#!/usr/bin/env python
+# kano-settings-onboot
+#
+# Copyright (C) 2014, 2015 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# Configure HDMI settings on boot.
+#
+# Also calls code to set clock config, to avoid need to an extra reboot.
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+import os
+import sys
+import shutil
+import json
+
+if __name__ == '__main__' and __package__ is None:
+    dir_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    if dir_path != '/usr':
+        sys.path.insert(1, dir_path)
+
+from microninja.utils import run_cmd, enforce_root
+from microninja.logging import logger
+from microninja_settings.system.display import get_status, get_model, set_hdmi_mode, \
+    get_edid, is_mode_fallback, set_safeboot_mode
+from microninja_settings.boot_config import set_config_value, set_config_comment, \
+    get_config_comment, get_config_value, has_config_comment, \
+    enforce_pi, is_safe_boot, safe_mode_backup_config, safe_mode_restore_config
+from microninja_settings.system.audio import is_HDMI, set_to_HDMI
+from microninja_settings.system.overclock_chip_support import check_clock_config_matches_chip
+
+logger.force_log_level('info')
+
+
+screen_log_path = '/boot/screen.log'
+
+overrides = {
+    '32V3H-H6A': {'target_group': 'DMT', 'target_mode': 16, 'is_monitor': True},
+    'AS4637_______': {'target_group': 'DMT', 'target_mode': 16, 'is_monitor': True},
+    'BMD_HDMI': {'target_group': 'CEA', 'target_mode': 33, 'is_monitor': True},
+}
+
+
+
+
+def check_model_present(model):
+    if get_config_comment('microninja_screen_used', model):
+        logger.info('The unit was configured for this model already, exiting.')
+        sys.exit()
+
+
+def override_models():
+    global overrides, edid, model
+
+    for override_model, override_rules in overrides.iteritems():
+        if override_model == model:
+            edid['target_group'] = override_rules['target_group']
+            edid['target_mode'] = override_rules['target_mode']
+            edid['is_monitor'] = override_rules['is_monitor']
+            return
+
+
+def calculate_is_monitor():
+    global edid
+
+    edid['target_full_range'] = edid['is_monitor']
+
+
+def compare_and_set_mode():
+    global edid, status
+
+    if status['group'] == edid['target_group'] and \
+       status['mode'] == edid['target_mode']:
+        logger.info('mode change not needed')
+        return False
+
+    else:
+        logger.info('mode change needed')
+        modes = '{} {}'.format(edid['target_group'], edid['target_mode'])
+        logger.info('setting mode: {}'.format(modes))
+
+        set_hdmi_mode(edid['target_group'], edid['target_mode'])
+        return True
+
+
+def compare_and_set_full_range():
+    global edid, status
+
+    if status['full_range'] == edid['target_full_range']:
+        logger.info('fullrange change not needed')
+        return False
+
+    else:
+        logger.info('fullrange change needed')
+        msg = 'setting fullrange to: {}'.format(edid['target_full_range'])
+        logger.info(msg)
+
+        if edid['target_full_range']:
+            set_config_value('hdmi_pixel_encoding', 2)
+        else:
+            set_config_value('hdmi_pixel_encoding', 0)
+        return True
+
+
+def compare_and_set_overscan():
+    global edid, status
+
+    if status['overscan'] == edid['target_overscan']:
+        logger.info('overscan change not needed')
+        return False
+
+    else:
+        logger.info('overscan change needed')
+        logger.info('setting overscan to: {}'.format(edid['target_overscan']))
+
+        if edid['target_overscan']:
+            set_config_value('disable_overscan', 0)
+            overscan_value = -48
+        else:
+            set_config_value('disable_overscan', 1)
+            overscan_value = 0
+
+        set_config_value('overscan_left', overscan_value)
+        set_config_value('overscan_right', overscan_value)
+        set_config_value('overscan_top', overscan_value)
+        set_config_value('overscan_bottom', overscan_value)
+        return True
+
+
+def get_screen_information():
+    """ Retrieves the information about the current screen.
+
+        The data will be logged to the bootpartition for
+        troubleshooting purposes.
+    """
+
+    info = {
+        "edid": get_edid(),
+        "model": get_model(),
+        "status": get_status()
+    }
+
+    with open(screen_log_path, 'w') as f:
+        json.dump(info, f, sort_keys=True, indent=4, separators=(',', ': '))
+
+    return info
+
+
+# main program
+enforce_pi()
+enforce_root('Need to be root!')
+
+# Gather and log data about the current screen
+screen_data = get_screen_information()
+
+# Shared reboot flag for reconfiguring for rpi1/2 and video
+reboot_now = False
+
+# Rpi1 and Rpi2 have different clock rate defaults, but only one
+# set of config options. Swap the config options if we have booted on the other
+# chip.
+
+if check_clock_config_matches_chip():
+    reboot_now = True
+
+# Reconfigure and reboot if the user requested safe mode
+# Or if the cable appears not to have been plugged in.
+if is_mode_fallback():
+    logger.warn("executing fallback boot")
+
+    # Backup the config file
+    safe_mode_backup_config()
+
+    set_safeboot_mode()
+
+    # Trigger a reboot
+    reboot_now = True
+
+
+# If we need to set anything to do with config.txt, reboot
+if reboot_now:
+    logger.sync()
+    run_cmd('reboot -f')
+    sys.exit()
+
+
+if is_safe_boot():
+    logger.info("In safe boot mode, restoring config.txt, skipping autoconfig")
+    
+    # Restore the config.txt file
+    safe_mode_restore_config()
+
+    sys.exit()
+
+
+# model and model comment check
+model = screen_data['model']
+logger.info('Screen model: {}'.format(model))
+if '--force' not in sys.argv:
+    check_model_present(model)
+
+# read status
+status = screen_data['status']
+if not status:
+    sys.exit(1)
+
+# get edid
+edid = screen_data['edid']
+if not edid:
+    sys.exit(1)
+
+
+# If the hdmi_group and hdmi_mode values are set explicitely in the config
+# file, skip the detection.
+if get_config_value('hdmi_group') != 0 and get_config_value('hdmi_mode') != 0:
+    if not has_config_comment('microninja_screen_used') or \
+       get_config_comment('microninja_screen_used', model):
+        # The screen is either the same or not set at all
+        logger.info('Explicit HDMI configuration detected, exiting.')
+        sys.exit()
+    else:
+        # New screen detected, will reconfigure
+        logger.info('New screen was detected.')
+
+# override modes, calculate is_monitor
+override_models()
+calculate_is_monitor()
+
+# output
+logger.debug(status)
+logger.debug(edid)
+
+# fix hdmi audio status
+if not edid['hdmi_audio'] and is_HDMI():
+    msg = 'hdmi audio not supported on this screen, changing to analogue'
+    logger.info(msg)
+    set_to_HDMI(False)
+
+
+# changes
+changes = compare_and_set_mode() or compare_and_set_full_range() or \
+    compare_and_set_overscan()
+
+if changes:
+    # write comment to config
+    set_config_comment('microninja_screen_used', model)
+    # reboot
+    logger.sync()
+    run_cmd('reboot -f')

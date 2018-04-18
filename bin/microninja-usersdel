@@ -1,0 +1,41 @@
+#!/bin/bash
+
+touch /etc/init.d/deleteusers
+cat > /etc/init.d/deleteusers <<EOF
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          deleteuser
+# Required-Start:
+# Required-Stop:
+# Default-Start: 3
+# Default-Stop:
+# Short-Description: Resize the root filesystem to fill partition
+# Description:
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+case "\$1" in
+  start)
+    log_daemon_msg "delete user" &&
+EOF
+for var in "$@"
+do
+    echo "    userdel -r $var &&" >> /etc/init.d/deleteusers
+done
+
+
+
+cat << EOF >> /etc/init.d/deleteusers
+    update-rc.d deleteusers remove &&
+    rm /etc/init.d/deleteusers &&
+    log_end_msg \$?
+    ;;
+  *)
+    echo "Usage: \$0 start" >&2
+    exit 3
+    ;;
+esac
+EOF
+chmod +x /etc/init.d/deleteusers &&
+update-rc.d deleteusers defaults

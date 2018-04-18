@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#
+# rc.others
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# additional system settings
+#
+
+# Disable the Kernel Magig System Request hotkey
+# http://en.wikipedia.org/wiki/Magic_SysRq_key
+
+# We forcibly disable the SYSRQ keyboard facility as it can do
+# a rather large number of magic nasty things to KanoOS
+#
+#  http://en.wikipedia.org/wiki/Magic_SysRq_key
+#
+sysrq_flag=/proc/sys/kernel/sysrq
+if [ -f "$sysrq_flag" ]; then
+    echo 0 > /proc/sys/kernel/sysrq
+fi
+
+# Assign alias Ctrl-Alt-1, 2, 7 to switch virtual terminals from the consoles.
+new_keymaps="
+control alt     keycode  2 = Console_1
+control alt     keycode  3 = Console_2
+control alt     keycode  8 = Console_7
+"
+
+echo "$new_keymaps" | /usr/bin/loadkeys - > /dev/null

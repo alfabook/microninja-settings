@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# postinst
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+TMP_FILE=/tmp/microninja-connect_conf
+
+case "$1" in
+    configure)
+
+        # Create custom sudoers file
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/microninja-wifi" > $TMP_FILE
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/microninja-wifi-gui" >> $TMP_FILE
+        echo "%sudo   ALL=(root) NOPASSWD: /usr/bin/microninja-connect" >> $TMP_FILE
+
+        # The owner and group for the sudoers file must both be 0
+        chown root:root $TMP_FILE
+
+        # The file permissions must be set to 0440
+        chmod 0440 $TMP_FILE
+
+        # Move the file to the sudoers directory
+        mv $TMP_FILE /etc/sudoers.d/
+
+        if [ -e /etc/microninja_version ]; then
+
+            # setting wireless module parameters
+            cp /usr/share/microninja-network/etc/modprobe.d/* /etc/modprobe.d/
+
+            # updating the /etc/network/interfaces
+            cp /usr/share/microninja-network/etc/network/* /etc/network/
+        fi
+	;;
+
+esac
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,15 @@
+bin/microninja-connect usr/bin
+bin/microninja-wifi usr/bin
+bin/microninja-wifi-gui usr/bin
+
+microninja_wifi_gui/* usr/lib/python2.7/dist-packages/microninja_wifi_gui
+
+icon/widget-no-internet.png /usr/share/microninja-settings/icon
+icon/widget-wifi.png /usr/share/microninja-settings/icon
+
+lxpanel-plugin-internet/microninja_internet.so usr/lib/arm-linux-gnueabihf/lxpanel/plugins/
+
+etc/modprobe.d /usr/share/microninja-network/etc
+etc/network /usr/share/microninja-network/etc
+
+media/microninja-connect/* /usr/share/microninja-connect/media

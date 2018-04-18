@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# kano-settings.postrm
+#
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+
+# Copyright (C) 2016 Alfabook srl
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+# rebadged with microninja
+
+rclocal_backup="/etc/rc.local.backup"
+
+case "$1" in
+
+    remove|upgrade)
+        # Restore the original rc.local script
+        mv -f $rclocal_backup /etc/rc.local
+
+        # Remove sudoers config file
+        rm /etc/sudoers.d/microninja-settings_conf
+
+        # TODO: Disable the proxy if enabled
+
+        # Remove dante libc symbolic link
+        rm -f /lib/arm-linux-gnueabihf/libc.so
+
+        # remove kano-settings-onboot from startup
+        update-rc.d microninja-settings remove
+
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

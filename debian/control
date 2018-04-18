@@ -1,0 +1,25 @@
+Source: microninja-settings
+Maintainer: Scuolabook Go Team <info@scuolabook.it>
+Section: admin
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), build-essential, pkg-config, libgtk2.0-dev,
+               lxpanel (>= 0.7.0), libfm-dev, libkdesk-dev
+
+Package: microninja-settings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, microninja-connect (= ${binary:Version}),
+         python, python-gi, dante-client, microninja-toolset, microninja-locale, libkdesk-dev,
+         gir1.2-gtk-3.0, sentry (>= 0.5-0),
+         python-bs4, python-pycountry, libnss-mdns, avahi-daemon
+Recommends: microninja-fonts
+Description: Graphical tool to set different system settings
+ This application is a GUI frontend to set multiple Microninja OS functionalities
+ like Wireless, Keyboard layout, Screen options, and Proxy.
+
+Package: microninja-connect
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, udhcpc,
+         rxvt-unicode-256color, libkdesk-dev, microninja-toolset
+Description: Software to make Microninja connect over Wireless networks
+ automatically.

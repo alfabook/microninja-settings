@@ -1,0 +1,223 @@
+
+/*
+
+# Copyright (C) 2014 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# This controls the styles specific to kano-settings */
+
+
+/* Top wiriting in internet status box */
+.internet_status_top {
+    padding:0px 10px;
+    color: @title_color;
+    font: Bariol bold 16;
+}
+
+/* Bottom wiriting in internet status box */
+.internet_status_bottom {
+    padding:0px 10px;
+    color: @subheading_color;
+    font: Bariol 14;
+}
+
+.connected {
+    background: @kano_green;
+    font-weight:bold;
+    margin:10px;
+}
+
+.not_connected {
+    background: #F76868;
+    font-weight:bold;
+    margin:10px;
+}
+
+.app-grid {
+    padding: 0px;
+    margin: 0px;
+}
+
+.app-grid GtkViewport {
+    padding: 0px;
+}
+
+/* Wallpaper icons */
+/* wallpaper_box is the image that shows the wallpaper the user can choose */
+.wallpaper_box {
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: transparent;
+    background: transparent;
+}
+.wallpaper_box:hover {
+    background: @kano_green;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: @kano_green;
+}
+.wallpaper_box_active {
+    background: @kano_green;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: @kano_green;
+}
+
+/* grey_box does not contain a wallpaper but will have the option for the user to add a custom wallpaper */
+.grey_box {
+    background: @inactive_border;
+    border-radius:10px;
+}
+.grey_box:hover {
+    border-color: @active_border;
+    border-style: solid;
+    border-width: 3px;
+    border-radius:10px;
+}
+/* Styling used on labels in set_overclock and set_mouse */
+/* */
+.bold_toggle GtkLabel {
+    font: Bariol Bold 13;
+}
+.normal_label {
+    font: Bariol 13;
+    color: @subheading_color;
+}
+
+.slider_label {
+    font: Bariol 13;
+    color: @subheading_color;
+}
+
+/* Info from the about screen */
+.about_version {
+    font: Bariol Bold 18;
+    color: @title_color;
+}
+
+.about_label {
+    font: Bariol 15;
+    color: @subheading_color;
+}
+
+.parental_activated {
+    color: @kano_green;
+    font-weight:bold;
+}
+
+.parental_desc_activated {
+    color: @title_color;
+}
+
+GtkTreeView:hover {
+    color: #ffffff;
+    background: @kano_orange_lighter;
+}
+
+GtkTreeView:selected {
+    color: #ffffff;
+    background: @kano_orange;
+}
+
+GtkVScale, GtkScale {
+    background: #dddddd;
+    border-radius: 3px;
+}
+
+GtkScale.slider:insensitive {
+    background: #bbbbbb;
+}
+
+GtkVScale.slider, GtkScale.slider {
+    background: @kano_green;
+}
+
+.checkbutton_label {
+    font: Bariol bold 14;
+    color: #333333;
+}
+
+.set_style_window {
+    background-color: #e1e1e1;
+}
+
+.set_background_window {
+    background-color: #FFF;
+}
+
+GtkNotebook {
+    background-color: #a9b0d3;
+    -GtkNotebook-tab-overlap: -12px;
+    -GtkWidget-focus-line-width: 0px;
+    -GtkNotebook-initial-gap: 28px;
+    padding: 0px;
+}
+.notebook-label{
+  color : #323232;
+}
+GtkNotebook tab:active {
+    background-color: #fff;
+    border: 0px;
+}
+
+GtkNotebook tab {
+    border: none;
+    background-color: #a9b0d3;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+GtkNotebook tab GtkLabel {
+    font: Bariol bold 13;
+    color: #FFF;
+    /* Preferably want inactive tab to have color writing #6e6e6e
+    but can't get it to work*/
+}
+
+GtkLabel.login {
+    font: Bariol Bold 13;
+    color: #6e6e6e;
+}
+
+.main_window_internet{
+    border : 1px solid #BBB ;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+/************************************************
+* Dark theme for Gtk.Plug
+************************************************/
+
+@define-color plug_background #44423d;
+
+.plug .parental_activated{
+    color: @kano_green;
+}
+
+.plug GtkEntry {
+    background: @plug_background;
+    color: #ffffff;
+}
+
+.plug {
+    background: @plug_background;
+}
+
+.plug GtkLabel {
+    color: #ffffff;
+}
+
+.plug GtkCheckButton {
+    background: @plug_background;
+}
+
+.plug GtkVScale.slider, .plug GtkScale.slider {
+    background: @kano_green;
+}
+
+.plug GtkVScale, .plug GtkScale {
+    background: #222200;
+    border-radius: 3px;
+}
